@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <h1>Signup</h1>
+        <style type="text/css">
+            .error {
+                color: red;
+            }
+        </style>
+    </header>
+    <body>
+        <form action="/validation" method="POST">
+            <table>
+            <tr>
+            <td><label>Username:</label></td>
+               <td><input type="text" name="username" value="{{ username }}" />
+               <span class="error">{{ username_error }}</span></td>
+            </tr>
+            <br>
+            <tr>
+            <td><label>Password:</label></td>
+                <td><input type="password" name="password" />
+                <span class="error">{{ password_error }}</span></td>
+           </tr>
+            <br>
+            <tr>
+            <td><label>Verify Password:</label></td>
+                <td><input type="password" name="verifypassword" />
+                <span class="error">{{ verify_error }}</span></td>
+            </tr>
+            <br>
+            <tr>
+            <td><label>E-mail(optional):</label></td>
+                <td><input type="email" name="email" value="{{ email }}" />
+                <span class="error">{{ email_error }}</span></td>
+            </tr>
+            </table>
+            <br>
+            <label>Submit:
+                <input type="submit" />
+            </label>
+        </form>
+    </body>
+</html>
